@@ -73,12 +73,10 @@ object SkinnerKit {
 
     fun init(application: Application) {
         MMKV.initialize(application)
-        if (SkinnerResources.resources == null) {
-            SkinnerResources.context = application
-            SkinnerResources.assetManager = application.assets
-            SkinnerResources.resources = application.resources
-            SkinnerResources.originResources = application.resources
-        }
+        SkinnerResources.context = application
+        SkinnerResources.assetManager = application.assets
+        SkinnerResources.resources = application.resources
+        SkinnerResources.originResources = application.resources
     }
 
     fun installSkinnerFactory(activity: AppCompatActivity) {
